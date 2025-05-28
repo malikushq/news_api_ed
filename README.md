@@ -30,6 +30,7 @@
 
 
 2.Создайте файл .env с переменными окружения (пример в .env.example):
+```bash
 DJANGO_SECRET_KEY=adminsecret
 DATABASE_NAME=admin_db
 DATABASE_USER=admin_rw
@@ -38,6 +39,7 @@ DATABASE_HOST=db
 DATABASE_PORT=5432
 
 3. Запустите контейнеры
+```bash
 docker-compose up --build
 
 4.Админка будет доступна по адресу:
@@ -45,6 +47,7 @@ http://localhost:8001/admin/
 root | 1234
 
 *Для создания пользователя администратора внутри контейнера admin-app выполните:
+```bash
 docker exec -it news_api-admin-app-1 python manage.py createsuperuser
 
 5.Пользовательское API и страницы:
